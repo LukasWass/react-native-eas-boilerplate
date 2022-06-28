@@ -1,0 +1,32 @@
+{
+	"cli": {
+		"version": ">= 0.52.0",
+		"requireCommit": false
+	},
+	"build": {
+		"dev": {
+			"developmentClient": true,
+			"distribution": "internal"
+		},
+		"test": {
+			"distribution": "store",
+			"android": {
+				"buildType": "apk",
+				"channel": "test-android"
+			},
+			"ios": {
+				"channel": "test-ios"
+			}
+		},
+		"prod": {
+			"distribution": "store",
+			"android": {
+				"buildType": "app-bundle",
+				"channel": "prod-android"
+			},
+			"ios": {
+				"channel": "prod-ios"
+			}
+		}
+	}
+}
